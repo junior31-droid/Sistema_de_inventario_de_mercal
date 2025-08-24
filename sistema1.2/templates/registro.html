@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Inventario Mercados de Alimentos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <main class="login-container">
+        <div class="login-form">
+            <a href="home.html" class="back-button">&#8592; Regresar</a>
+            <div class="logo">
+                <img src="img/fondo-mercal.png" alt="Logo Mercal">
+            </div>
+            <h1>REGISTRO</h1>
+            <form action="/registro" method="post">
+                <div class="input-group">
+                    <label for="nombre_usuario">Nombre de Usuario</label>
+                    <input type="text" id="nombre_usuario" name="nombre_usuario" required>
+                </div>
+                <div class="input-group">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <div class="input-group">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena" name="contrasena" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirmar_contrasena">Confirmar Contraseña</label>
+                    <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" required>
+                </div>
+                <button type="submit" class="login-button">REGISTRARSE</button>
+            </form>
+        </div>
+    </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Aquí puedes agregar la funcionalidad de JavaScript específica para esta página.
+            // Por ejemplo, para validar que las contraseñas coincidan antes de enviar el formulario.
+
+            const form = document.querySelector('form');
+            const password = document.getElementById('contrasena');
+            const confirmPassword = document.getElementById('confirmar_contrasena');
+
+            form.addEventListener('submit', function(event) {
+                if (password.value !== confirmPassword.value) {
+                    alert('Las contraseñas no coinciden. Por favor, inténtalo de nuevo.');
+                    event.preventDefault(); // Evita que el formulario se envíe
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+<body class="registro-page">
+  <div class="background-image"></div>
+</body>

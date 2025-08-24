@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Inventario Mercados de Alimentos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="login-page">
+    <div class="background-image"></div>
+
+    <main class="login-container">
+        <div class="login-form">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/fondo-mercal.png') }}" alt="Logo Mercal">
+            </div>
+            <h1>INVENTARIO</h1>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="usuario">USUARIO</label>
+                    <input type="text" id="usuario" name="usuario" required>
+                </div>
+                <div class="input-group">
+                    <label for="contrasena">CONTRASEÑA</label>
+                    <input type="password" id="contrasena" name="contrasena" required>
+                </div>
+                <button type="submit" class="login-button">INICIAR SESIÓN</button>
+              
+            </form>
+        </div>
+    </main>
+
+    <script>
+        // Manejo del formulario
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const usuario = document.getElementById("usuario").value;
+            const clave = document.getElementById("contrasena").value;
+
+            // Validaciones
+            if (usuario === "admin" && clave === "1234") {
+                sessionStorage.setItem("usuarioAutenticado", "true");
+                sessionStorage.setItem("usuarioNombre", usuario);
+
+                //Redireccion al home
+                window.location.href = ""
+            } else {
+                alert("Usuario o contraseña incorrectos");
+            }
+        });
+    </script>
+</body>
+
+</html>

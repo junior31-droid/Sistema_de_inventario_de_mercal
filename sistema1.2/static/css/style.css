@@ -1,0 +1,373 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/fondo-mercal.png');
+    background-size: 65% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 20px;
+}
+
+/* Estilos del menú desplegable del usuario */
+.user-menu-container {
+    position: relative;
+    padding: 5px;
+}
+
+.user-icon {
+    cursor: pointer;
+}
+
+.user-icon img {
+    width: 50px;
+    height: auto;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    min-width: 150px;
+    z-index: 100;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Contenido principal */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.card span {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Estilos del menú lateral */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: #007bff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu.open {
+    width: 150px;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.close-btn {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: #f1f1f1;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.menu-item {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #0056b3;
+}
+
+.menu-item img {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+.menu-footer {
+    padding: 10px;
+    text-align: center;
+}
+
+.logout-button {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+    background-color: #0056b3;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.logout-button img {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+.logout-button:hover {
+    background-color: #004494;
+}
+
+/*login estilooo*/
+/* Contenedor principal para el formulario de login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilos del formulario */
+.login-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+}
+
+.login-form .logo img {
+    width: 150px; /* Ajusta el tamaño del logo */
+    margin-bottom: 20px;
+}
+
+.login-form h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* Estilos para cada grupo de entrada (label + input) */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilos del botón de inicio de sesión */
+.login-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos del enlace de registro */
+.links {
+    margin-top: 20px;
+}
+
+.links a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* imagen de fondo de la pantalla principal */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/fondo-mercal.png');
+    background-size: 57% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+/* Estilos para el botón de retroceso */
+.back-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.back-button:hover {
+    color: #0056b3;
+}
+
+
+/*diseño de la parte del login*/
+.login-page .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/edificio_mercal.jpg'); /*agregar imagen de fondo de edificio de mercal*/
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 1.6;
+    z-index: -1;
+}
+
+/*diseño del registro nuevo de usuario*/
+.registro-page .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/fondo-mercal.png'); /*agregar imagen de fondo de edificio de mercal*/
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 1.6;
+    z-index: -1;
+}

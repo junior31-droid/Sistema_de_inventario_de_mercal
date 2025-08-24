@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activos Digitales</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+    <a href="home.html" class="back-button">&#8592; Regresar</a>
+   <div class="background-image"></div>
+    
+    <nav class="side-menu" id="sideMenu">
+        <div class="menu-header">
+            <a href="#" class="close-btn" id="closeMenu">&times;</a>
+        <div class="background-image"></div>
+    
+    <nav class="side-menu" id="sideMenu">
+        <div class="menu-header">
+            <a href="#" class="close-btn" id="closeMenu">&times; </a>
+        </div>
+        <ul class="menu-list">
+            <li>
+                <a href="#" class="menu-item">
+                    <img   src="{{ url_for('static', filename='img/home.png') }}" alt="Inicio">
+                    <span>INICIO</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu-item">
+                    <img  src="{{ url_for('static', filename='img/laptop.png') }}" alt="Activos Digitales">
+                    <span>ACTIVOS DIGITALES</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu-item">
+                    <img  src="{{ url_for('static', filename='img/desktop.png') }}" alt="Activos Hardware">
+                    <span>ACTIVOS HARDWARE</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu-item">
+                    <img  src="{{ url_for('static', filename='img/archivos.png') }}" alt="Historial">
+                    <span>HISTORIAL</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu-item">
+                    <img   src="{{ url_for('static', filename='img/usuario.png') }}" alt="Usuarios">
+                    <span>USUARIOS</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu-item">
+                    <img  src="{{ url_for('static', filename='img/server.png') }}" alt="Respaldo">
+                    <span>RESPALDO</span>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="menu-footer">
+            <a href="#" class="logout-button">
+                <img  src="{{ url_for('static', filename='img/close.png') }}" alt="Salir">
+                <span>SALIR</span>
+            </a>
+        </div>
+    </nav>
+
+    <header>
+        <div class="menu-icon" id="openMenu">&#9776;</div>
+        <div class="user-menu-container">
+            <div class="user-icon" id="userIcon">
+                <img  src="{{ url_for('static', filename='img/usuario.png') }}" alt="Usuario">
+            </div>
+            <div class="dropdown-menu" id="userDropdown">
+            </div>
+        </div>
+    </header>
+
+<body>
+  <main class="content">
+        <div class="cards-container">
+            <a href="#" class="card">
+                <div><img src="{{ url_for('static', filename='img/icon-digital.png') }}" alt="Activos Digitales"></div>
+                <div><span>ACTIVOS DIGITALES</span></div>
+           
+    </main>
+ <script src="{{ url_for('static', filename='js/script.js') }}"></script> 
+
+</body>
+</html>
