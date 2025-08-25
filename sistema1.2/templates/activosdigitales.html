@@ -8,13 +8,7 @@
   <title>Activos Digitales</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-    <a href="home.html" class="back-button">&#8592; Regresar</a>
-   <div class="background-image"></div>
-    
-    <nav class="side-menu" id="sideMenu">
-        <div class="menu-header">
-            <a href="#" class="close-btn" id="closeMenu">&times;</a>
-        <div class="background-image"></div>
+       <div class="background-image"></div>
     
     <nav class="side-menu" id="sideMenu">
         <div class="menu-header">
@@ -61,8 +55,8 @@
         
         <div class="menu-footer">
             <a href="#" class="logout-button">
-                <img  src="{{ url_for('static', filename='img/close.png') }}" alt="Salir">
-                <span>SALIR</span>
+                <img  src="{{ url_for('static', filename='img/close.png') }}" alt="Cerrar Seccion">
+                <span>CERRAR SECCION</span>
             </a>
         </div>
     </nav>
@@ -78,15 +72,26 @@
         </div>
     </header>
 
-<body>
-  <main class="content">
+    <main class="content">
+        <h1>ACTIVOS DIGITALES</h1>
         <div class="cards-container">
-            <a href="#" class="card">
-                <div><img src="{{ url_for('static', filename='img/icon-digital.png') }}" alt="Activos Digitales"></div>
-                <div><span>ACTIVOS DIGITALES</span></div>
-           
+        <!-- esta pagina esta en construccion -->
+            <a src="activosdigitales.html" class="card">
+                <div><img  src="{{ url_for('static', filename='img/icon-base-de-datos.png') }}" alt="Base De Datos"></div>
+                <div><span>BASE DE DATOS </span></div>
+            </a>
+            <!--esta pagina esta en construccion-->
+            <a src="#" class="card">
+                <div><img  src="{{ url_for('static', filename='img/icon-codigo-fuente.png') }}" alt="ACodigo Fuente"></div>
+                <div><span>CODIGO FUENTE</span></div>
+            </a>
+            <a src="#" class="card">
+                <div><img  src="{{ url_for('static', filename='img/icon-dispositivos-tecnologicos.png') }}" alt="Software"></div>
+                <div><span>SOFTWARE</span></div>
+            </a>
+        </div>
     </main>
- <script src="{{ url_for('static', filename='js/script.js') }}"></script> 
-
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

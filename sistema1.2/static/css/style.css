@@ -5,6 +5,7 @@ body, html {
     color: #333;
 }
 
+/*Imagen de mercal*/
 .background-image {
     position: fixed;
     top: 0;
@@ -19,6 +20,7 @@ body, html {
     z-index: -1;
 }
 
+/*Boton del menu desplegable*/
 header {
     background-color: #007bff;
     color: white;
@@ -29,6 +31,7 @@ header {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/*Iconos*/
 .menu-icon {
     font-size: 24px;
     cursor: pointer;
@@ -363,7 +366,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../img/fondo-mercal.png'); /*agregar imagen de fondo de edificio de mercal*/
+    background-image: url('../img/edificio_mercal.jpg'); /*agregar imagen de fondo de edificio de mercal*/
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -371,3 +374,4 @@ h1 {
     opacity: 1.6;
     z-index: -1;
 }
+

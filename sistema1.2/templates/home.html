@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <script>
-        if (!sessionStorage.getItem("usuarioAutenticado")) {
-            window.location.href = "login.html"; 
-             }
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventario Mercados de Alimentos</title>
@@ -59,12 +54,11 @@
         
         <div class="menu-footer">
             <a href="#" class="logout-button">
-                <img  src="{{ url_for('static', filename='img/close.png') }}" alt="Salir">
-                <span>SALIR</span>
+                <img  src="{{ url_for('static', filename='img/close.png') }}" alt="Cerrar Seccion">
+                <span>CERRAR SECCION</span>
             </a>
         </div>
     </nav>
-
     <header>
         <div class="menu-icon" id="openMenu">&#9776;</div>
         <div class="user-menu-container">

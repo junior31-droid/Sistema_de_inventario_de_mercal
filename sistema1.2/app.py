@@ -41,11 +41,6 @@ def serve_static(filename):
 with app.app_context():
      db.create_all()
 
-@app.route("/")
-def home():
-     if "username" not in session:
-         return redirect(url_for("login"))
-     return render_template("home.html")
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -62,22 +57,12 @@ def logout():
     session.pop("username", None)
     return redirect(url_for("login"))
 
-@app.route("/registro", methods=['GET', 'POST'])
-def registro():
-    if request.method == 'POST':
-        if User.query.filter_by(username=request.form["nombre_usuario"]).first():
-            flash("El usuario ya existe", 'error')
-        else:
-            new_user = User(
-                username=request.form["nombre_usuario"],
-                email=request.form["correo"],
-                password=request.form["contrasena"]
-            )
-            db.session.add(new_user)
-            db.session.commit()
-            flash("Registro exitoso. Inicia sesión.", 'success')
-            return redirect(url_for("login")) 
-        return render_template("registro.html")
+@app.route("/")
+def home():
+     if "username" not in session:
+         return redirect(url_for("login"))
+     return render_template("home.html")
+
 
 @app.route("/activosdigitales")
 def activos_digitales():

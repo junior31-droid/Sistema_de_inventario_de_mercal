@@ -1,25 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-
-
 <head>
-      <script>
-        if (!sessionStorage.getItem("usuarioAutenticado")) {
-            window.location.href = "activoshardware.html"; 
-             }
-    </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Activos Hardware </title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-      <a href="home.html" class="back-button">&#8592; Regresar</a>
-   <div class="background-image"></div>
-    
-    <nav class="side-menu" id="sideMenu">
-        <div class="menu-header">
-            <a href="#" class="close-btn" id="closeMenu">&times;</a>
-        <div class="background-image"></div>
+          <div class="background-image"></div>
     
     <nav class="side-menu" id="sideMenu">
         <div class="menu-header">
@@ -52,7 +39,7 @@
             </li>
             <li>
                 <a href="#" class="menu-item">
-                    <img   src="{{ url_for('static', filename='img/usuario.png') }}" alt="Usuarios">
+                    <img   src="{{ url_for('static', filename='img/usuarios-extra.png') }}" alt="Usuarios">
                     <span>USUARIOS</span>
                 </a>
             </li>
@@ -66,8 +53,8 @@
         
         <div class="menu-footer">
             <a href="#" class="logout-button">
-                <img  src="{{ url_for('static', filename='img/close.png') }}" alt="Salir">
-                <span>SALIR</span>
+                <img  src="{{ url_for('static', filename='img/close.png') }}" alt="Cerrar Seccion">
+                <span>CERRAR SECCION</span>
             </a>
         </div>
     </nav>
@@ -83,15 +70,27 @@
         </div>
     </header>
 
-<body>
-  <main class="content">
+    <main class="content">
+        <h1>ACTIVOS HARDWARE</h1>
         <div class="cards-container">
-            <a href="#" class="card">
-                <div><img src="{{ url_for('static', filename='img/icon-hardware.png') }}" alt="Activos Digitales"></div>
-                <div><span>ACTIVOS activos hardware</span></div>
-           
+        <!-- esta pagina esta en construccion -->
+            <a src="activosdigitales.html" class="card">
+                <div><img  src="{{ url_for('static', filename='img/icon-servidor.png') }}" alt="Activos Digitales"></div>
+                <div><span>SERVIDORES</span></div>
+            </a>
+            <!--esta pagina esta en construccion-->
+            <a src="activoshardware.html" class="card">
+                <div><img  src="{{ url_for('static', filename='img/icon-dispositivos-de-red.png') }}" alt="Activos Hardware"></div>
+                <div><span>DISPOSITIVOS DE RED </span></div>
+            </a>
+             <a src="activoshardware.html" class="card">
+                <div><img  src="{{ url_for('static', filename='img/icon-dispositivos-tecnologicos.png') }}" alt="Activos Hardware"></div>
+                <div><span>DISPOSITIVOS TECNOLOGICOS</span></div>
+            </a>
+            
+        </div>
     </main>
- <script src="{{ url_for('static', filename='js/script.js') }}"></script> 
-
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
