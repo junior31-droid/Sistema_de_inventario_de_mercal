@@ -50,7 +50,7 @@ def login():
             session['username'] = user.username
             return redirect(url_for('home'))
         flash('Usuario o contraseña incorrectos', 'error')
-    return render_template('activosdigitales.html')
+    return render_template('login.html')
 
 @app.route("/logout")
 def logout():
